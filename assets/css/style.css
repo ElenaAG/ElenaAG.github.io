@@ -3187,6 +3187,13 @@ hr {
   color: #ff5c97
 }
 
+.what-I-do .single-do .do-icon img {
+  font-size: 73px;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: #ff5c97
+}
+
 .what-I-do .single-do-project .do-icon span {
   font-size: 73px;
   margin-bottom: 20px;
