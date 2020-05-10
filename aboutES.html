@@ -46,16 +46,28 @@
     </div>
   </div>
   <!-- Preloader Start -->
-  <script>
+  <!-- <script>
 		//accedo al elemento import con id=miimport
 		var importado = document.querySelector("#headerES");
 
 		//accedo al contenido del import
 		var contenidoImport = importado.import;
 
+		//accedo a un elemento en concreto del contenido del import
+		var elementoDentroImport = contenidoImport.querySelector('.headerES');
+
 		//inyecto ese contenido del import en la página
-		document.body.appendChild(contenidoImport);
-	</script>
+		document.body.appendChild(elementoDentroImport);
+	</script> -->
+  <script>
+    var link = document.querySelector('link[rel="import"]');
+    var content = link.import;
+
+    // Grab DOM from warning.html's document.
+    var el = content.querySelector('.headerES');
+
+    document.body.appendChild(el.cloneNode(true));
+  </script>
   <header>
     <!-- Header Start -->
     <div class="header-area header-transparrent ">
