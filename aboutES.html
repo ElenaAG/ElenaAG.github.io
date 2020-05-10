@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>EA - About me</title>
+  <title>EA - Sobre Mi</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="assets/css/nice-select.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="import" href="headerES.html" id="headerES">
   <style>
     html {
       scroll-behavior: smooth;
@@ -45,7 +46,19 @@
     </div>
   </div>
   <!-- Preloader Start -->
+  <script>
+		//accedo al elemento import con id=miimport
+		var importado = document.querySelector("#headerES");
 
+		//accedo al contenido del import
+		var contenidoImport = importado.import;
+
+		//accedo a un elemento en concreto del contenido del import
+		var elementoDentroImport = contenidoImport.querySelector("body");
+
+		//inyecto ese contenido del import en la página
+		document.body.appendChild(elementoDentroImport);
+	</script>
   <header>
     <!-- Header Start -->
     <div class="header-area header-transparrent ">
